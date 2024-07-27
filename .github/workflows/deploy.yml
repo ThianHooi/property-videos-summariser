@@ -42,6 +42,8 @@ jobs:
         run: bun install
       - name: Build
         run: bun run build
+      - name: List build directory
+        run: ls -la ./build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
