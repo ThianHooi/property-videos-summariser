@@ -55,8 +55,8 @@ def refresh_videos():
     for video in filtered_videos:
         attributes = get_video_attributes(video)
         c.execute('''
-        INSERT OR IGNORE INTO videos (videoId, title, publishedTime, videoUrl, property_name_and_location, property_name, location)
-        VALUES (:videoId, :title, :publishedTime, :videoUrl, :property_name_and_location, :property_name, :location)
+        INSERT OR IGNORE INTO videos (videoId, title, publishedTime, videoUrl, property_name_and_location, property_name, location, video_number)
+        VALUES (:videoId, :title, :publishedTime, :videoUrl, :property_name_and_location, :property_name, :location, :video_number)
         ''', attributes)
 
     conn.commit()
