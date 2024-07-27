@@ -1,0 +1,14 @@
+node_modules
+
+/.cache
+/build
+.env
+
+deprecated/**
+venv/**
+testing-data/**
+node_modules/**
+
+scripts/__pycache__/**
+
+*.db
