@@ -6,6 +6,7 @@ export default defineConfig({
   base: '/property-videos-summariser/',
   plugins: [
     remix({
+      ssr: false,
       basename: '/property-videos-summariser/',
       future: {
         v3_fetcherPersist: true,
