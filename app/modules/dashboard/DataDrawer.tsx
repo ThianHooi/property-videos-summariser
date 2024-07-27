@@ -18,6 +18,15 @@ const Title = ({ children }: { children: React.ReactNode }) => (
 );
 
 export function DataSheet({ open, onOpenChange, video }: Props) {
+  const parseProsCons = (prosCons: string | string[] | undefined) => {
+    if (!prosCons) return null;
+
+    if (Array.isArray(prosCons)) {
+      return prosCons.map((proCon, index) => <li key={index}>{proCon}</li>);
+    }
+    return <Markdown>{prosCons}</Markdown>;
+  };
+
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent className="overflow-y-scroll min-w-[50vw]">
@@ -44,11 +53,11 @@ export function DataSheet({ open, onOpenChange, video }: Props) {
 
           <div>
             <Title>Pros</Title>
-            <Markdown>{video?.summary?.pros}</Markdown>
+            {parseProsCons(video?.summary?.pros)}
           </div>
           <div>
             <Title>Cons</Title>
-            <Markdown>{video?.summary?.cons}</Markdown>
+            {parseProsCons(video?.summary?.cons)}
           </div>
 
           <div>

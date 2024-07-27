@@ -7,8 +7,8 @@ import GoogleMapAnchor from './GoogleMapAnchor';
 
 type Summary = {
   introduction?: Introduction;
-  pros?: string;
-  cons?: string;
+  pros?: string | string[];
+  cons?: string | string[];
   summary?: string;
 };
 
@@ -50,7 +50,6 @@ export const columns: ColumnDef<Video>[] = [
     header: 'Location',
   },
   {
-    accessorKey: 'location',
     header: 'Google Maps',
     cell: ({ row }) => (
       <GoogleMapAnchor
