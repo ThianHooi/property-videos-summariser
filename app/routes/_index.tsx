@@ -24,20 +24,7 @@ export default function Index() {
     <div className="flex-col md:flex">
       <div className="border-b">
         <div className="flex h-16 items-center px-4 justify-between w-full">
-          <h2 className="text-3xl font-bold tracking-tight">
-            Videos List
-            <span className="text-base font-normal text-gray-700 italic">
-              {' '}
-              from{' '}
-              <a
-                href="https://www.youtube.com/c/iherng"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                iherng's YouTube Channel
-              </a>
-            </span>
-          </h2>
+          <h1 className="text-3xl font-bold tracking-tight">Videos</h1>
           <div className="flex space-x-1 md:space-x-4">
             <AboutDialog />
             <DisclaimerDialog />
@@ -46,6 +33,9 @@ export default function Index() {
       </div>
 
       <div className="flex-1 space-y-4 p-8 pt-6">
+        <h2 className="text-sm font-medium leading-none">
+          List of property review videos from iherng
+        </h2>
         <DataTable
           columns={columns}
           data={videos as Video[]}

@@ -38,9 +38,10 @@ const AboutDialog = () => {
               href="https://www.youtube.com/c/iherng"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-blue-500 underline"
             >
               iherng
-            </a>
+            </a>{' '}
             and use Google's Gemini AI (specifically the{' '}
             <code>gemini-1.5-pro</code> model) to generate summaries of each
             video. Our goal is to provide quick insights into video content,
