@@ -15,7 +15,7 @@ const AboutDialog = () => {
       <DialogTrigger>
         <Button variant="ghost">About</Button>
       </DialogTrigger>
-      <DialogContent className="w-[60vw]">
+      <DialogContent className="md:w-[60vw]">
         <DialogHeader>
           <DialogTitle>About the project</DialogTitle>
         </DialogHeader>

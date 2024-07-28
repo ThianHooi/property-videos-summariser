@@ -21,11 +21,11 @@ export default function Index() {
   const [selectedVideo, setSelectedVideo] = useState<Video>();
 
   return (
-    <div className="hidden flex-col md:flex">
+    <div className="flex-col md:flex">
       <div className="border-b">
         <div className="flex h-16 items-center px-4 justify-between w-full">
           <h2 className="text-3xl font-bold tracking-tight">Videos List</h2>
-          <div className="flex space-x-4">
+          <div className="flex space-x-1 md:space-x-4">
             <AboutDialog />
             <DisclaimerDialog />
           </div>
