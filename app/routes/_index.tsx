@@ -24,7 +24,20 @@ export default function Index() {
     <div className="flex-col md:flex">
       <div className="border-b">
         <div className="flex h-16 items-center px-4 justify-between w-full">
-          <h2 className="text-3xl font-bold tracking-tight">Videos List</h2>
+          <h2 className="text-3xl font-bold tracking-tight">
+            Videos List
+            <span className="text-base font-normal text-gray-700 italic">
+              {' '}
+              from{' '}
+              <a
+                href="https://www.youtube.com/c/iherng"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                iherng's YouTube Channel
+              </a>
+            </span>
+          </h2>
           <div className="flex space-x-1 md:space-x-4">
             <AboutDialog />
             <DisclaimerDialog />
