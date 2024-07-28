@@ -44,6 +44,13 @@ export const columns: ColumnDef<Video>[] = [
   {
     accessorKey: 'property_name',
     header: 'Property Name',
+    filterFn: (row, id, value) => {
+      const name = row.getValue<string>('property_name')?.toLowerCase();
+      const location = row.getValue<string>('location')?.toLowerCase();
+      const search = value.toLowerCase();
+
+      return name?.includes(search) || location?.includes(search);
+    },
   },
   {
     accessorKey: 'location',
